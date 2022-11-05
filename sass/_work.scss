@@ -1,0 +1,80 @@
+.work {
+
+  &__content {
+    @include content-width;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__container {
+    margin-top: 4.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.1rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr
+    }
+  }
+}
+
+.step {
+
+  background-color: $color-dark-blue;
+  color: $color-main-white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 2rem 6rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+
+    height: 6.4rem;
+    width: 6.4rem;
+
+
+    &--blue {
+      width: 6.5rem;
+      height: 1.4rem;
+
+    }
+  }
+
+  &__timing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  &__time {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__heading {
+    margin-top: 3rem;
+    font-size: 2.1rem;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-top: 2.4rem;
+
+    &--comment {
+      font-size: 1.2rem;
+    }
+  }
+}

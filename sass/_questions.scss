@@ -1,0 +1,64 @@
+.questions {
+  padding: 8rem 0;
+  background-color: $color-dark-blue;
+  color: $color-main-white;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 4rem 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3.2rem;
+
+    @include content-width;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    max-width: 50%;
+  }
+
+  &__agreement,
+  &__link {
+    font-size: 1.2rem;
+    color: $color-main-white;
+  }
+
+  &__form {
+    display: flex;
+    gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+
+    }
+
+    &--input {
+      width: 29rem;
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        width: 40rem;
+      }
+
+      @media only screen and (max-width: $bp-small-3) {
+        flex-direction: column;
+        width: 50rem;
+      }
+      
+    }
+  }
+
+  &__button {
+    padding: 0 4rem;
+
+    &:hover {
+      background-color: $color-main-white;
+      color: $color-main-black;
+    }
+  }
+}

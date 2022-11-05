@@ -1,0 +1,164 @@
+////////////////////////////////////////
+// Variables
+
+$color-main-black: #000;
+$color-main-white: #fff;
+$color-main-blue: #098FCF;
+$color-main-gray: #565656;
+
+$color-light-gray: #F9F9F9;
+$color-dark-blue: #043C77;
+
+$stroke-input: #D4D4D4;
+$stroke-table: #e7e7e7;
+
+$font-size-primary: 1.6rem;
+
+@mixin content-width {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+////////////////////////////////////////
+// MEDIA QUERY MANAGER
+
+$bp-largest: 90em; //1440px
+$bp-large: 75em; //1200px
+$bp-medium: 60em; //960px
+$bp-medium-2: 53.75em; //860px
+$bp-small: 48em; //768px
+$bp-small-2: 41em; //656px
+$bp-small-3: 34em; //544px
+$bp-small-4: 27em; //432px
+$bp-smallest: 20em; //320px
+
+
+////////////////////////////////////////
+// Root
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 40%;
+  }
+
+  @media only screen and (max-width: $bp-small-4) {
+    font-size: 35%;
+  }
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  font-size: $font-size-primary;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  @media only screen and (max-width: $bp-large) {
+    gap: 6rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    gap: 3rem;
+  }
+}
+
+////////////////////////////////////////
+// Components
+.logo {
+  width: 22rem;
+}
+
+.btn {
+  color: $color-main-white;
+  background-color: $color-main-blue;
+  height: 4.6rem;
+  transition: all .5s;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-dark-blue;
+  }
+}
+
+.icon {
+  &__black {
+    fill: $color-main-black;
+  }
+
+  &__white {
+    fill: $color-main-white;
+  }
+}
+
+.heading-1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+}
+
+.heading-2 {
+  font-weight: 700;
+  font-size: 3.6rem;
+
+  &__white {
+    color: $color-main-white;
+  }
+
+  span {
+    color: $color-main-blue;
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.arrow {
+  height: 5.6rem;
+  width: 5.6rem;
+  border: 1px solid $stroke-input;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.icon-right {
+  height: 3.2rem;
+  width: 3.2rem;
+  rotate: -90deg;
+}
+
+.icon-left {
+  height: 3.2rem;
+  width: 3.2rem;
+  rotate: 90deg;
+}

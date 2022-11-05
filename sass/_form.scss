@@ -1,0 +1,84 @@
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    &--checkbox {
+      position: relative;
+      padding-left: 4rem;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    height: 4.6rem;
+    outline: 1px solid $stroke-input;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    border: 3px solid transparent;
+
+    &:focus {
+      box-shadow: 0 1rem 2rem rgba(#000, .1);
+      border-bottom: 3px solid $color-main-blue;
+    }
+
+    &--checkbox {
+      display: none;
+
+      &:checked~.form__label--checkbox .form__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__checkbox {
+    height: 2.4rem;
+    width: 2.4rem;
+    background-color: $color-light-gray;
+    border: 1px solid $stroke-input;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  &__select {
+    padding-left: 1.5rem;
+    height: 4.6rem;
+    border: 1px solid $stroke-input;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-main-blue;
+    }
+  }
+
+  &__range {
+    appearance: none;
+    outline: none;
+    height: 1px;
+    margin-top: -.8rem;
+    background-image: -webkit-linear-gradient(left, #098FCF 0%, #098FCF 16.7%, #D4D4D4 16.7%, #D4D4D4 100%);
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background-color: $color-main-blue;
+      height: 1.6rem;
+      width: 1.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.certificates {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include content-width;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 2rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  &__images {
+    overflow: hidden;
+    position: relative;
+    height: 40rem;
+    margin-top: 2.8rem;
+    padding-top: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 50rem;
+      padding-top: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 45rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      height: 72rem;
+    }
+
+    @media only screen and (max-width: $bp-small-2) {
+      height: 64rem;
+    }
+
+    @media only screen and (max-width: $bp-small-3) {
+      height: 55rem;
+    }
+    @media only screen and (max-width: $bp-small-4) {
+      height: 43rem;
+    }
+  }
+
+  &__img {
+    padding: 2rem;
+    box-shadow: 0px .4rem 3rem rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    width: 21.3%;
+    transition: all .5s;
+  }
+}

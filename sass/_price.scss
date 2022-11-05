@@ -1,0 +1,63 @@
+.price {
+
+  &__content {
+    @include content-width;
+    overflow-x: scroll;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 2rem;
+    }
+  }
+}
+.table {
+  margin-top: 4.8rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 2rem;
+  }
+
+  &__body {
+    border: 1px solid $stroke-table;
+  }
+
+  &__header {
+    background-color: $color-dark-blue;
+    color: $color-main-white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 2rem;
+  }
+
+  &__cell {
+    border-spacing: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1.6rem 0;
+    padding-left: 3rem;
+    vertical-align: top;
+    border-bottom: 1px solid $stroke-table;
+
+    &--class {
+      text-transform: uppercase;
+      border: 1px solid $stroke-table;
+    }
+
+    &--sort {
+      background-color: $color-main-blue;
+      color: $color-main-white;
+      font-weight: 700;
+      font-size: 2.4rem;
+      padding-top: 1.6rem;
+      padding-left: 2rem;
+      vertical-align: top;
+      text-transform: uppercase;
+    }
+  }
+
+  &__empty {
+    height: 2rem;
+    border: 0;
+  }
+}
