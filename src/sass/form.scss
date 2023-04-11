@@ -3,6 +3,22 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+
+    &--select {
+      position: relative;
+
+      &::after {
+        content: "\2039";
+        position: absolute;
+        right: 17px;
+        top: 47%;
+        font-size: 25px;
+        z-index: 0;
+        transform: rotate(-90deg);
+        text-align: center;
+        color: #868686;
+      }
+    }
   }
 
   &__label {
@@ -22,6 +38,7 @@
     padding-left: 1.5rem;
     font-size: 1.4rem;
     border: 1px solid $stroke-input;
+    background-color: $color-main-white;
 
     &:focus {
       box-shadow: 0 1rem 2rem rgba(#000, .1);
@@ -34,6 +51,10 @@
       &:checked~.form__label--checkbox .form__icon {
         opacity: 1;
       }
+    }
+
+    &::placeholder {
+      font-size: 1.4rem;
     }
   }
 
@@ -59,11 +80,18 @@
     height: 4.6rem;
     border: 1px solid $stroke-input;
     appearance: none;
+    background-color: $color-main-white;
+    color: $color-main-gray;
 
     &:focus {
       outline: none;
       border: 1px solid $color-main-blue;
     }
+  }
+
+  &__input,
+  &__select {
+    font-size: 1.6rem;
   }
 
   &__range {

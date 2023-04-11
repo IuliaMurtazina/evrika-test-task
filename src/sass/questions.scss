@@ -22,6 +22,10 @@
     max-width: 70%;
   }
 
+  &__agreement {
+    padding: 0 1rem;
+  }
+
   &__agreement,
   &__link {
     font-size: 1.2rem;
@@ -49,7 +53,7 @@
       @media only screen and (max-width: $bp-small-3) {
         width: 100%;
       }
-      
+
     }
   }
 

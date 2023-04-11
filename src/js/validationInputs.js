@@ -1,4 +1,3 @@
-
 const inputs = [
   "delivery-name",
   "delivery-phone",
@@ -16,11 +15,18 @@ inputs.forEach((el) => {
 
   actions.forEach((action) => {
     input.addEventListener(action, () => {
-      if (input.value.trim() === "") {
+      if (
+        input.value.trim() === "" ||
+        (input.type === "tel" && input.value.length < 17)
+      ) {
         input.style.borderBottom = "3px solid red";
       } else {
         input.style.borderBottom = "3px solid #098FCF";
       }
     });
+  });
+
+  input.addEventListener("blur", () => {
+    input.style.borderBottom = "3px solid transparent";
   });
 });
