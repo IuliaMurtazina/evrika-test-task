@@ -18,10 +18,10 @@
 
   &__input {
     height: 4.6rem;
-    outline: 1px solid $stroke-input;
+    outline: none;
     padding-left: 1.5rem;
     font-size: 1.4rem;
-    border: 3px solid transparent;
+    border: 1px solid $stroke-input;
 
     &:focus {
       box-shadow: 0 1rem 2rem rgba(#000, .1);
@@ -58,6 +58,7 @@
     padding-left: 1.5rem;
     height: 4.6rem;
     border: 1px solid $stroke-input;
+    appearance: none;
 
     &:focus {
       outline: none;

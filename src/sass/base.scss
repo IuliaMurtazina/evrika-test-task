@@ -92,6 +92,7 @@ body {
   transition: all .5s;
   border: none;
   cursor: pointer;
+  font-size: 18px;
 
   &:hover {
     background-color: $color-dark-blue;
