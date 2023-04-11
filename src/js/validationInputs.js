@@ -27,6 +27,6 @@ inputs.forEach((el) => {
   });
 
   input.addEventListener("blur", () => {
-    input.style.borderBottom = "3px solid transparent";
+    input.style.borderBottom = "1px solid #D4D4D4";
   });
 });
