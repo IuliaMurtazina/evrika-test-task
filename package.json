@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://iuliamurtazina.github.io/evrika-test-task/",
-  "style": "script.js",
+  "main": "script.js",
   "scripts": {
     "dev": "webpack --mode development",
     "dev:watch": "webpack --mode development --watch",
