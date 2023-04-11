@@ -16,6 +16,10 @@
     @media only screen and (max-width: $bp-large) {
       padding: 2rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem;
+    }
   }
 }
 
@@ -30,7 +34,7 @@
     gap: 3rem;
   }
 
-  @media only screen and (max-width: $bp-small-4) {
+  @media only screen and (max-width: $bp-small) {
     display: flex;
     flex-direction: column;
   }

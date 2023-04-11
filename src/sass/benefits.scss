@@ -16,6 +16,10 @@
     @media only screen and (max-width: $bp-large) {
       padding: 0 2rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1rem;
+    }
   }
 
   &__container {
@@ -26,13 +30,12 @@
 
     @media only screen and (max-width: $bp-large) {
       grid-template-columns: repeat(2, 1fr);
-      padding: 3rem;
+      padding: 3rem 1rem;
       margin-top: 0;
     }
     
-    @media only screen and (max-width: $bp-small-4) {
+    @media only screen and (max-width: $bp-small-2) {
       grid-template-columns: 1fr;
-      padding: 5rem;
     }
   }
 }

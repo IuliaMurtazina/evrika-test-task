@@ -45,22 +45,7 @@ $bp-smallest: 20em; //320px
 
 html {
   font-size: 62.5%;
-
-  @media only screen and (max-width: $bp-large) {
-    font-size: 56.25%;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    font-size: 50%;
-  }
-
-  @media only screen and (max-width: $bp-small) {
-    font-size: 40%;
-  }
-
-  @media only screen and (max-width: $bp-small-4) {
-    font-size: 35%;
-  }
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +53,11 @@ body {
   margin: 0 auto;
   font-size: $font-size-primary;
   font-weight: 400;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .main {
@@ -78,6 +68,7 @@ body {
   @media only screen and (max-width: $bp-large) {
     gap: 6rem;
   }
+
   @media only screen and (max-width: $bp-small) {
     gap: 3rem;
   }
@@ -87,6 +78,11 @@ body {
 // Components
 .logo {
   width: 22rem;
+
+
+  @media only screen and (max-width: $bp-small-4) {
+    width: 15rem;
+  }
 }
 
 .btn {
@@ -115,6 +111,14 @@ body {
 .heading-1 {
   font-weight: 700;
   font-size: 4.8rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-small-2) {
+    font-size: 3rem;
+  }
 }
 
 .heading-2 {
@@ -127,6 +131,15 @@ body {
 
   span {
     color: $color-main-blue;
+  }
+
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small-2) {
+    font-size: 2.5rem;
   }
 }
 
@@ -161,4 +174,18 @@ body {
   height: 3.2rem;
   width: 3.2rem;
   rotate: 90deg;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 1rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.btn-close {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: black;
+  position: absolute;
+  cursor: pointer;
 }

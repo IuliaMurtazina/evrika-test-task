@@ -1,0 +1,45 @@
+.partners {
+
+  &__content {
+    padding-bottom: 11rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $stroke-table;
+      position: absolute;
+      bottom: 7.2rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        bottom: 5rem;
+      }
+
+      @media only screen and (max-width: $bp-small-2) {
+        bottom: 3.5rem;
+      }
+    }
+
+    @include content-width;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 0 2rem;
+      padding-bottom: 8rem;
+    }
+
+    @media only screen and (max-width: $bp-small-2) {
+      padding: 0 1rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__logo img {
+    width: 100%;
+  }
+
+  &__slider {
+    align-items: flex-end;
+    margin-top: 2rem;
+  }
+}

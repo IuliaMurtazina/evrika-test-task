@@ -6,6 +6,10 @@
     @media only screen and (max-width: $bp-large) {
       padding: 0 2rem;
     }
+
+    @media only screen and (max-width: $bp-small-2) {
+      padding: 0 1rem;
+    }
   }
 
   &__container {
@@ -16,7 +20,12 @@
 
     @media only screen and (max-width: $bp-large) {
       grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr
+      grid-template-columns: 1fr;
+      padding: 0 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small-2) {
+      padding: 0 1rem;
     }
   }
 }
@@ -31,6 +40,11 @@
 
   @media only screen and (max-width: $bp-large) {
     padding: 2rem 6rem;
+  }
+
+  
+  @media only screen and (max-width: $bp-small-2) {
+    padding: 3rem;
   }
 
   &__header {
